@@ -5,7 +5,9 @@
 
 }
 .learn__list{
-    text-decoration: none;
     color: hsl(200, 80%, 30%);
 
+}
+.code{
+    text-decoration: none;
 }
