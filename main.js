@@ -30,10 +30,20 @@
 //     }
 // }
 
-// console.log(typeof age)
+// console.log(typeof age) 
 
 // Templete String
 var firstName = 'Nguyen Thanh'
 var lastName = 'Huy'
+var description = '     Ben is funny Dog is is is  '
+var listString = 'ben, nhi, huy'
 
-console.log(`My Name is: ${firstName} ${lastName}`)
+// console.log(`My Name is: ${firstName} ${lastName}`)
+
+// console.log(description.lastIndexOf('is', 18))
+
+// console.log(description.replaceAll('is','HuyMau'))
+
+// console.log(description.length)
+
+console.log(listString.split(', '))

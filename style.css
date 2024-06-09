@@ -11,3 +11,17 @@
 .code{
     text-decoration: none;
 }
+
+.learn__container{
+    position: fixed;
+    width: 100%;
+    font-size: 2rem;
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+.learn__container:hover{
+    color: ;
+}
