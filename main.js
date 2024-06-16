@@ -33,10 +33,10 @@
 // console.log(typeof age) 
 
 // Templete String
-var firstName = 'Nguyen Thanh'
-var lastName = 'Huy'
-var description = '     Ben is funny Dog is is is  '
-var listString = 'ben, nhi, huy'
+// var firstName = 'Nguyen Thanh'
+// var lastName = 'Huy'
+// var description = '     Ben is funny Dog is is is  '
+// var listString = 'ben, nhi, huy'
 
 // console.log(`My Name is: ${firstName} ${lastName}`)
 
@@ -46,4 +46,48 @@ var listString = 'ben, nhi, huy'
 
 // console.log(description.length)
 
-console.log(listString.split(', '))
+// console.log(listString.split(', '))
+
+// ============= Làm việc với kiểu số ===============
+
+// var age = 10;
+// var PI = 3.14;
+// var result = a /PI;
+// console.log(isNaN(result))
+
+// var age = 25;
+// var PI = 3.5498345635439865;
+// var myString = age.toString();
+// console.log(age)
+// console.log(typeof age)
+// console.log(PI.toFixed(4))
+
+
+// =============  Mảng Trong JavaScript===============
+// var languages= [
+//     'Python',
+//     'C#',
+//     'JavaScript',
+//     'C++',
+//     'Ruby',
+//      null,
+//      undefined,
+//      function(){},
+//      {}
+// ]
+
+// console.log(languages)
+// console.log(typeof languages)
+
+// ============= Làm việc với Mảng Trong JavaScript===============
+var languages= [
+    'Python',
+    'C#',
+    'JavaScript',
+    'C++',
+    'Ruby',
+     null,
+     undefined,
+     function(){},
+     {}
+]
