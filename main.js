@@ -79,15 +79,87 @@
 // console.log(languages)
 // console.log(typeof languages)
 
-// ============= Làm việc với Mảng Trong JavaScript===============
-var languages= [
-    'Python',
-    'C#',
-    'JavaScript',
-    'C++',
-    'Ruby',
-     null,
-     undefined,
-     function(){},
-     {}
-]
+// ============= Làm việc với Mảng Trong JavaScript=============== 
+// var languages= [
+//     'Python',
+//     'C#',
+//     'JavaScript',
+//     'C++',
+//     'Ruby',
+//      null,
+//      undefined,
+//      function(){},
+//      {}
+// ]
+
+// var languages2= [
+//     'Python',
+//     'C#',
+//     'JavaScript',
+//     'C++',
+//     'Ruby'   
+// ]
+
+// languages2.splice(1, 1, "Ben") //(vị trí con trỏ, số phần tử xóa, phần tử mới cần chèn)
+// console.log(languages2.push('PHP'))
+
+// console.log(languages.concat(languages2))
+// console.log(languages2.slice())
+
+// ============= Hàm Trong JavaScript=============== 
+// function showDialog() {
+//     alert('Learn JavaScript')
+// }
+// showDialog();
+
+// ============= Sử dụng Hàm Trong JavaScript=============== 
+// function inputNumber(number, address){
+//     console.log(number, address)
+// }
+
+// inputNumber(10, 'huy');
+
+// function inputLog(){
+//     var myString = ''
+//     for(var param of arguments){
+//         myString+=`${param} - `
+//     }
+//     console.log(myString)
+
+// }
+
+// inputLog(1,2,3,4,7,9)
+
+
+// ============= Return Hàm Trong JavaScript=============== 
+// showName();
+// showName2();
+
+// // Declaration
+// function showName(){
+//     console.log('Nguyen Thanh Huy')
+// }
+// // Exprestion
+// var showName2 = function (){
+//     console.log('Nguyen Thanh Huy 2')
+// }
+
+// ============= Object Trong JavaScript=============== 
+
+var myInfo = {
+    name: 'Huy',
+    age: 25,
+    address: "Dong Nai",
+    getName: function(){ // Khai báo 1 phương thức trong 1 Object
+        return this.name;
+    }
+}
+// myInfo['-phoneNumber']= '0379849760' //Them Object
+
+//function: Phuong thuc - Method
+//Other : Thuoc tinh - Property
+console.log(myInfo.getName())
+
+
+
+
