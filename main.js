@@ -146,20 +146,23 @@
 
 // ============= Object Trong JavaScript=============== 
 
-var myInfo = {
-    name: 'Huy',
-    age: 25,
-    address: "Dong Nai",
-    getName: function(){ 
-        return this.name;
-    }
-}
+// var myInfo = {
+//     name: 'Huy',
+//     age: 25,
+//     address: "Dong Nai",
+//     getName: function(){ 
+//         return this.name;
+//     }
+// }
 // myInfo['-phoneNumber']= '0379849760' //Them Object
 // Khai báo 1 phương thức trong 1 Object
 
 //function: Phuong thuc - Method
 //Other : Thuoc tinh - Property
-console.log(myInfo.getName())
+// console.log(myInfo.getName())
+
+
+// ============= Object Contructor Trong JavaScript=============== 
 
 
 
