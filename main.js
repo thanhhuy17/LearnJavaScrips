@@ -139,7 +139,7 @@
 // function showName(){
 //     console.log('Nguyen Thanh Huy')
 // }
-// // Exprestion
+// // Expression
 // var showName2 = function (){
 //     console.log('Nguyen Thanh Huy 2')
 // }
@@ -162,8 +162,75 @@
 // console.log(myInfo.getName())
 
 
-// ============= Object Contructor Trong JavaScript=============== 
+// ============= Object Constructor Trong JavaScript=============== 
+//Tạo bản thiết kế
+// var User= function (firstName, lastName, avatar){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.avatar = avatar
 
+//     this.getName = function(){
+//         return `${this.lastName} ${this.firstName}`
+//     }
+// }
+//Sử dụng bản thiết kế
+// var author = new User('Huy', 'Nguyen', 'Image');
+// var user1 = new User('Vu', 'Nguyen','image2')
+// // Thêm đặc tính khác nhau
+// author.title = "I like code"
+// user1.comment = 'I need learn code JavaScript'
+
+// console.log(author.getName())
+// console.log(user1.getName())
+
+// // Test
+// //Create
+// function flower(color, width, height, fragrant){
+//     this.color = color;
+//     this.width = width;
+//     this.height = height;
+//     this.fragrant = fragrant;
+    
+// }
+// // Use
+// var tulip = new flower('Violet', '20cm', '30cm', 1)
+// var lily = new flower('Orange', '20cm', '30cm', 2)
+
+// console.log(lily.color)
+
+// ============= Object Prototype Trong JavaScript=============== 
+// function flower(color, width, height, fragrant){
+//     this.color = color;
+//     this.width = width;
+//     this.height = height;
+//     this.fragrant = fragrant;
+//     this.getFlower = function(){
+//         return `${this.color} and ${this.beautiful}`
+//     }
+// }
+// // Thêm thuộc tính
+// flower.prototype.beautiful = 'Extremely Beauty'
+// // Thêm phương thức
+// flower.prototype.getSize = function(){
+//     return `${this.width} and ${this.height}`
+// }
+
+// // Use
+// var tulip = new flower('Violet', '20cm', '30cm', 1)
+// var lily = new flower('Orange', '20cm', '30cm', 2)
+
+// console.log(tulip.beautiful)
+// console.log(lily.getSize())
+// console.log(lily.getFlower())
+
+// ============= Date Trong JavaScript=============== 
+// var date = new Date();
+
+// var dayPre = date.getDate();
+// var monthPre = date.getMonth() + 1;
+// var yearPre = date.getFullYear();
+
+// console.log(`${dayPre}/${monthPre}/${yearPre}`)
 
 
 
