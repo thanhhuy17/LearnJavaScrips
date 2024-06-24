@@ -232,5 +232,265 @@
 
 // console.log(`${dayPre}/${monthPre}/${yearPre}`)
 
+//Object Constructor : Use to create the Design
+// and Object Prototype : Add Property and Method
+
+// function Car(speed, color, fuel){
+//     this.speed = speed;
+//     this.color = color;
+//     this.fuel = fuel;
+//     this.getSpeedAndFuel = function(){
+//         return `${this.speed} ${this.fuel}`
+//     }
+// }
+
+// //Add Property
+// Car.prototype.beautiful = 'Nice'
+// //Add Method
+// Car.prototype.getColorAndBeautiful = function(){
+//     return `${this.color} ${this.beautiful}`
+// }
+
+// var honda = new Car('150km/h', 'Red', 'Old');
+// var ferrari = new Car('300km/h', 'Orange', 'Electric');
+
+// console.log(honda);
+// console.log(ferrari.getColorAndBeautiful());
+
+// Switch Case
+
+// var day = 8;
+
+// switch(day){
+//     case 2:
+//         console.log('Hôm nay là thứ 2')
+//         break;
+//     case 3:
+//         console.log('Hôm nay là thứ 3')
+//         break;
+//     case 4:
+//         console.log('Hôm nay là thứ 4')
+//         break;
+
+//     case 5:
+       
+        
+//     case 6:
+        
+     
+//     case 7:
+//         console.log('Hôm nay là thứ 5,6,7')
+//         break;
+//     default: console.log('Không xác đinh')
+// }
+
+//Toán tử 3 ngôi
+//1 Object
+// var car ={
+//     useAge : 20,
+//     name: 'Toyota',
+//     color: "black"
+// }
+
+// var checkCar = car.useAge >= 30 ? `${'Name: '+ car.name}\n${'Color: '+car.color}` : 'No Age';
+
+// console.log(checkCar)
+
+// loop For with Array
+// var myArray = [
+//     'Hyundai',
+//     'Toyota',
+//     'Ferrari',
+//     'Lamborghini',
+//     'Porches'
+// ]
+
+// var lengthMyArray = myArray.length;
+// console.log(lengthMyArray);
+// for(i = 0; i < lengthMyArray; i++){
+//     console.log(myArray[i-2])
+// }
+
+// loop For In
+
+// var myArray = [
+//     'Hyundai',
+//     'Toyota',
+//     'Ferrari',
+//     'Lamborghini',
+//     'Porches'
+// ]
+
+// for(var key in myArray){
+//     console.log(myArray[key])
+// }
+
+// var car ={
+//     useAge : 20,
+//     name: 'Toyota',
+//     color: "black"
+// }
+
+// for(var key in car){
+//     console.log(car[key])
+// }
 
 
+// var myName = 'Nguyen Thanh Huy'
+// for(var key in myName){
+//     // console.log(myName[key])
+//     if(myName[key] === 'H'){
+//         console.log('my name is huy')
+//     }
+//     else{
+//         console.log("Don't See")
+
+//     }
+// }
+
+
+//Loop Of
+// var car ={
+//     useAge : 20,
+//     name: 'Toyota',
+//     color: "black"
+// }
+// var a =Object.values(car)
+// console.log(a)
+// for(var value of a){
+//     console.log(value)
+// }
+
+
+//while
+
+// var myCar = [
+//     'Hyundai',
+//     'Toyota',
+//     'Ferrari',
+//     'Lamborghini',
+//     'Porches'
+// ]
+
+// var i = 0;
+// var lengthCar =myCar.length
+// while( i < lengthCar){
+//     console.log(myCar[i]);
+//     i++;
+// }
+
+//do while
+
+// var i = 0
+// var isSuccess = false
+
+// do {
+//     i++
+//     console.log('Nap lan thu: '+ i)
+
+//     if(true){
+//         isSuccess = true
+//     }
+// } while (!isSuccess && i<=3);
+
+//break and continues
+
+// for (let index = 0; index < 10; index++) {
+//     if(index > 5){
+//         break;
+//     }
+//     console.log(index)
+// }
+
+// for (let index = 0; index < 10; index++) {
+//     if(index % 2 === 0){
+//         continue
+//     }
+//     console.log(index)
+// }
+
+// 48: Nested Loop
+// var myArray = [
+//     [6,5],
+//     [4,3],
+//     [2,1]
+// ]
+
+// // Order By
+// for (let i = 0; i < myArray.length; i++) {
+//     // console.log(myArray[i])
+//     for (let j = 0; j < myArray[i].length; j++) {
+//         console.log(myArray[i][j])
+//     }
+    
+// }
+
+
+//49: Làm việc với Mảng trong JavaScript
+var sports = [  
+    {
+        id: 1,
+        name: 'Soccer',
+        tired: 1
+    },
+    {
+        id: 2,
+        name: 'Volleyball',
+        tired: 1
+    },
+    {
+        id: 3,
+        name: 'Badminton',
+        tired: 1
+    },
+    {
+        id: 4,
+        name: 'BaseBall',
+        tired: 100
+    },
+    {
+        id: 5,
+        name: 'Swimming',
+        tired: 0
+    },
+
+    {
+        id: 6,
+        name: 'Badminton',
+        tired: 100
+    },
+
+] 
+// sports.forEach(function(sport, index){
+//     console.log(index,sport)
+// });
+//--------------- EVERY---------------------
+// var checkTired = sports.every(function(sport, index){
+//     return sport.tired === 0
+// });
+// var huy = ` ${checkTired ? 'Quá khỏe': 'Quá Mệt'}`
+// console.log(checkTired)
+
+//--------------- SOME---------------------
+// var checkTired = sports.some(function(sport, index){
+//     return sport.tired === 0
+// });
+
+// var huy = checkTired ? 'Quá khỏe': 'Quá Mệt'
+// console.log(checkTired)
+//--------------- FIND---------------------
+
+// var checkTired = sports.find(function(sport, index){
+//     return sport.name === 'Badminton'
+// });
+
+// var huy = checkTired ? 'Quá khỏe': 'Quá Mệt'
+// console.log(checkTired)
+//--------------- Filter---------------------
+
+var checkTired = sports.filter(function(sport, index){
+    return sport.name === 'Badminton'
+});
+
+var huy = checkTired ? 'Quá khỏe': 'Quá Mệt'
+console.log(checkTired)
