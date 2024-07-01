@@ -427,40 +427,40 @@
 
 
 //49: Làm việc với Mảng trong JavaScript
-var sports = [  
-    {
-        id: 1,
-        name: 'Soccer',
-        tired: 1
-    },
-    {
-        id: 2,
-        name: 'Volleyball',
-        tired: 1
-    },
-    {
-        id: 3,
-        name: 'Badminton',
-        tired: 1
-    },
-    {
-        id: 4,
-        name: 'BaseBall',
-        tired: 100
-    },
-    {
-        id: 5,
-        name: 'Swimming',
-        tired: 0
-    },
+// var sports = [  
+//     {
+//         id: 1,
+//         name: 'Soccer',
+//         tired: 1
+//     },
+//     {
+//         id: 2,
+//         name: 'Volleyball',
+//         tired: 1
+//     },
+//     {
+//         id: 3,
+//         name: 'Badminton',
+//         tired: 1
+//     },
+//     {
+//         id: 4,
+//         name: 'BaseBall',
+//         tired: 100
+//     },
+//     {
+//         id: 5,
+//         name: 'Swimming',
+//         tired: 0
+//     },
 
-    {
-        id: 6,
-        name: 'Badminton',
-        tired: 100
-    },
+//     {
+//         id: 6,
+//         name: 'Badminton',
+//         tired: 100
+//     },
 
-] 
+// ] 
 // sports.forEach(function(sport, index){
 //     console.log(index,sport)
 // });
@@ -488,9 +488,115 @@ var sports = [
 // console.log(checkTired)
 //--------------- Filter---------------------
 
-var checkTired = sports.filter(function(sport, index){
-    return sport.name === 'Badminton'
-});
+// var checkTired = sports.filter(function(sport, index){
+//     return sport.name === 'Badminton'
+// });
 
-var huy = checkTired ? 'Quá khỏe': 'Quá Mệt'
-console.log(checkTired)
+// var huy = checkTired ? 'Quá khỏe': 'Quá Mệt'
+// console.log(checkTired)
+
+//================ 50. Array map method trong JavaScript | Làm việc với mảng =====================
+var sports = [  
+    {
+        id: 1,
+        name: 'Soccer',
+        tired: 1,
+        coin: 105
+    },
+    {
+        id: 2,
+        name: 'Volleyball',
+        tired: 1,
+        coin: 103
+    },
+    {
+        id: 3,
+        name: 'Badminton',
+        tired: 1,
+        coin: 102
+    },
+    {
+        id: 4,
+        name: 'BaseBall',
+        tired: 100,
+        coin: 109
+    },
+    {
+        id: 5,
+        name: 'Swimming',
+        tired: 0,
+        coin: 156
+    },
+
+    {
+        id: 6,
+        name: 'Badminton',
+        tired: 100,
+        coin: 199
+    },
+
+] 
+// function game(game){
+//     return {
+//         id : game.id,
+//         name: `New Game ${game.name}`,
+//         tired: game.tired,
+//         // index: index
+//     }
+// }
+
+// Create New Array Name
+// function newName(names){
+//     return 
+//     {
+//         id: names.id,
+//         name: `New Game ${game.name}`,
+//         tired: game.tired
+//     }
+// }
+// var newSports = sports.map((game, index)=>{
+//     return[
+//         `id : ${game.id}`
+//         // sport: game.name''
+//         // mucdo: game.tired,
+//         // index: index + 1
+//     ]
+        
+    
+// }); // Array
+// console.log("Learn map: ", newSports)
+
+
+//============= Phương thức reduce khi làm việc với array =======================
+// Dùng Vòng Lặp
+// var totalCoin = 0;
+// for (var iterator of sports) {
+//     totalCoin += iterator.coin
+// }
+
+// console.log(totalCoin)
+
+//Dùng Reduce nó có 2 tham sô truyền vào
+//1. function 2. Giá trị ban đầu
+//Function truyền vào có 4 tham số:
+//1. accumulator: Giá trị khởi tạo = Giá trị ban đầu = 0
+//2. curentValue: Giá trị phần tử trong mảng
+//3: curentIndex: Vị trí trong mảng 0,1,2...
+//4: originArray: = sports, mảng ban đầu có bao nhiêu thì nó có bấy nhiêu.
+
+// function totalHanderCoin(accumulator, curentValue, curentIndex, originArray){
+//     console.table({
+//         "Môn thể thao thứ": curentIndex + 1,
+//         "Chi phí chơi": `${curentValue.coin} ngàn đồng`        
+//     })
+//     accumulator+=curentValue.coin
+//     return accumulator
+// }
+
+// var totalCoin = sports.reduce(totalHanderCoin, 0)
+
+// console.log("Tổng chi phí chơi thể thao: " , totalCoin)
+
+// viết ngắn gọn
+var totalCoin=sports.reduce((acc, val)=>acc + val.coin, 0)
+console.log(totalCoin)
