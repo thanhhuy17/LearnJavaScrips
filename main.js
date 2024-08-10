@@ -484,52 +484,52 @@
 // console.log(checkTired)
 
 //================ 50. Array map method trong JavaScript | Làm việc với mảng =====================
-var sports = [
-  {
-    id: 1,
-    name: "Soccer",
-    tired: 1,
-    coin: 105,
-  },
-  {
-    id: 2,
-    name: "Volleyball",
-    tired: 1,
-    coin: 103,
-  },
-  {
-    id: 3,
-    name: "Badminton",
-    tired: 1,
-    coin: 102,
-  },
-  {
-    id: 4,
-    name: "BaseBall",
-    tired: 100,
-    coin: 109,
-  },
-  {
-    id: 5,
-    name: "Swimming",
-    tired: 0,
-    coin: 156,
-  },
+// var sports = [
+//   {
+//     id: 1,
+//     name: "Soccer",
+//     tired: 1,
+//     coin: 105,
+//   },
+//   {
+//     id: 2,
+//     name: "Volleyball",
+//     tired: 1,
+//     coin: 103,
+//   },
+//   {
+//     id: 3,
+//     name: "Badminton",
+//     tired: 1,
+//     coin: 102,
+//   },
+//   {
+//     id: 4,
+//     name: "BaseBall",
+//     tired: 100,
+//     coin: 109,
+//   },
+//   {
+//     id: 5,
+//     name: "Swimming",
+//     tired: 0,
+//     coin: 156,
+//   },
 
-  {
-    id: 6,
-    name: "Badminton",
-    tired: 100,
-    coin: 199,
-  },
-];
+//   {
+//     id: 6,
+//     name: "Badminton",
+//     tired: 100,
+//     coin: 199,
+//   },
+// ];
 
 // Tổng tiền
-const sum = sports.reduce((count, value) => {
-  return count + value.coin;
-}, 0);
+// const sum = sports.reduce((count, value) => {
+//   return count + value.coin;
+// }, 0);
 
-console.log("Total: ", sum);
+// console.log("Total: ", sum);
 
 // function game(game){
 //     return {
@@ -596,8 +596,111 @@ console.log("Total: ", sum);
 // } , 0)
 // console.log("Total Coin: ", sumCoin)
 
-const random = Math.floor(Math.random() * 100);
-if (random < 50) {
-  console.log("Success!", random);
-}
+// const random = Math.floor(Math.random() * 100);
+// if (random < 50) {
+//   console.log("Success!", random);
+// }
 
+// Call back function:  call back là 1 hàm đc làm đối số truyền nào của 1 hàm khác
+
+// function myTestFunction(param) {
+//   param("Học Đi Đôi vs Hành");
+// }
+
+// function callBackFunc(value) {
+//   console.log("value: ", value);
+// }
+
+// myTestFunction(callBackFunc); // Call back
+
+// Call back function: PART 2
+
+// Array.prototype.map2 = function (callback) {
+//   // console.log(this);
+//   var arrayLength = this.length;
+//   var output = [];
+//   for (var i = 0; i < arrayLength; i++) {
+//     var result = callback(this[i], i);
+//     output.push(result);
+//   }
+//   return output;
+// };
+
+// const listUsers = [
+//   {
+//     name: "Hung",
+//     age: 15,
+//   },
+//   {
+//     name: "David",
+//     age: 2,
+//   },
+//   {
+//     name: "Dang",
+//     age: 8,
+//   },
+//   {
+//     name: "Dan",
+//     age: 8,
+//   },
+// ];
+
+// const users = listUsers.map2(function (user, index) {
+//   return  `<h2>Name:  ${user.name} ${index}</h2>`;
+// });
+
+// const users = listUsers.map(function (user) {
+//   return `<h2>Name:  ${user.name}</h2>`;
+// });
+
+// console.log("Hay", users.join("\n"));
+
+// Array.prototype.filter2 = function(callback){
+//     const arrayLength = this.length
+//     const output = []
+//     console.log(arrayLength);
+//     for(let i = 0; i < arrayLength; i++){
+//         var result = callback(this[i], i)
+//         if(result == true){
+//             output.push(this[i])
+//         }
+//     }
+//     return output
+// }
+
+// const a= listUsers.filter2((nameTrung, index)=>{
+//     return nameTrung.name =="Dan"
+// })
+
+// console.log(a);
+
+const listUsers = [
+  {
+    name: "Hung",
+    age: 15,
+  },
+  {
+    name: "David",
+    age: 2,
+  },
+  {
+    name: "Dang",
+    age: 8,
+  },
+  {
+    name: "Dan",
+    age: 8,
+  },
+];
+
+listUsers.length = 10
+
+console.log(listUsers.length);
+
+// for (let i = 0; i < listUsers.length; ++i) {
+//   console.log(listUsers[i]);
+// }
+
+for(var value in listUsers){
+    console.log(listUsers[value]);
+}
