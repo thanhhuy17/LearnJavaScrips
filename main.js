@@ -2,22 +2,19 @@
 //     alert('Xin Chào Huy Nguyễn');
 // }, 3000)
 
-
 // setInterval(function(){
 //     console.log("JavaScript" + Math.random())
 // }, 2000)
-
 
 // var a = 1;
 // var b = 2;
 
 // if (a==b) {
-//     console.log('Toán tử đúng')  ;  
+//     console.log('Toán tử đúng')  ;
 // }
 // else{
 //     console.log('Toán tử sai');
 // }
-
 
 // var age = 25
 // // Object
@@ -30,7 +27,7 @@
 //     }
 // }
 
-// console.log(typeof age) 
+// console.log(typeof age)
 
 // Templete String
 // var firstName = 'Nguyen Thanh'
@@ -62,7 +59,6 @@
 // console.log(typeof age)
 // console.log(PI.toFixed(4))
 
-
 // =============  Mảng Trong JavaScript===============
 // var languages= [
 //     'Python',
@@ -79,7 +75,7 @@
 // console.log(languages)
 // console.log(typeof languages)
 
-// ============= Làm việc với Mảng Trong JavaScript=============== 
+// ============= Làm việc với Mảng Trong JavaScript===============
 // var languages= [
 //     'Python',
 //     'C#',
@@ -97,7 +93,7 @@
 //     'C#',
 //     'JavaScript',
 //     'C++',
-//     'Ruby'   
+//     'Ruby'
 // ]
 
 // languages2.splice(1, 1, "Ben") //(vị trí con trỏ, số phần tử xóa, phần tử mới cần chèn)
@@ -106,13 +102,13 @@
 // console.log(languages.concat(languages2))
 // console.log(languages2.slice())
 
-// ============= Hàm Trong JavaScript=============== 
+// ============= Hàm Trong JavaScript===============
 // function showDialog() {
 //     alert('Learn JavaScript')
 // }
 // showDialog();
 
-// ============= Sử dụng Hàm Trong JavaScript=============== 
+// ============= Sử dụng Hàm Trong JavaScript===============
 // function inputNumber(number, address){
 //     console.log(number, address)
 // }
@@ -130,8 +126,7 @@
 
 // inputLog(1,2,3,4,7,9)
 
-
-// ============= Return Hàm Trong JavaScript=============== 
+// ============= Return Hàm Trong JavaScript===============
 // showName();
 // showName2();
 
@@ -144,13 +139,13 @@
 //     console.log('Nguyen Thanh Huy 2')
 // }
 
-// ============= Object Trong JavaScript=============== 
+// ============= Object Trong JavaScript===============
 
 // var myInfo = {
 //     name: 'Huy',
 //     age: 25,
 //     address: "Dong Nai",
-//     getName: function(){ 
+//     getName: function(){
 //         return this.name;
 //     }
 // }
@@ -161,8 +156,7 @@
 //Other : Thuoc tinh - Property
 // console.log(myInfo.getName())
 
-
-// ============= Object Constructor Trong JavaScript=============== 
+// ============= Object Constructor Trong JavaScript===============
 //Tạo bản thiết kế
 // var User= function (firstName, lastName, avatar){
 //     this.firstName = firstName;
@@ -190,7 +184,7 @@
 //     this.width = width;
 //     this.height = height;
 //     this.fragrant = fragrant;
-    
+
 // }
 // // Use
 // var tulip = new flower('Violet', '20cm', '30cm', 1)
@@ -198,7 +192,7 @@
 
 // console.log(lily.color)
 
-// ============= Object Prototype Trong JavaScript=============== 
+// ============= Object Prototype Trong JavaScript===============
 // function flower(color, width, height, fragrant){
 //     this.color = color;
 //     this.width = width;
@@ -223,7 +217,7 @@
 // console.log(lily.getSize())
 // console.log(lily.getFlower())
 
-// ============= Date Trong JavaScript=============== 
+// ============= Date Trong JavaScript===============
 // var date = new Date();
 
 // var dayPre = date.getDate();
@@ -273,11 +267,9 @@
 //         break;
 
 //     case 5:
-       
-        
+
 //     case 6:
-        
-     
+
 //     case 7:
 //         console.log('Hôm nay là thứ 5,6,7')
 //         break;
@@ -335,7 +327,6 @@
 //     console.log(car[key])
 // }
 
-
 // var myName = 'Nguyen Thanh Huy'
 // for(var key in myName){
 //     // console.log(myName[key])
@@ -348,7 +339,6 @@
 //     }
 // }
 
-
 //Loop Of
 // var car ={
 //     useAge : 20,
@@ -360,7 +350,6 @@
 // for(var value of a){
 //     console.log(value)
 // }
-
 
 //while
 
@@ -422,12 +411,11 @@
 //     for (let j = 0; j < myArray[i].length; j++) {
 //         console.log(myArray[i][j])
 //     }
-    
+
 // }
 
-
 //49: Làm việc với Mảng trong JavaScript
-// var sports = [  
+// var sports = [
 //     {
 //         id: 1,
 //         name: 'Soccer',
@@ -460,7 +448,7 @@
 //         tired: 100
 //     },
 
-// ] 
+// ]
 // sports.forEach(function(sport, index){
 //     console.log(index,sport)
 // });
@@ -496,46 +484,53 @@
 // console.log(checkTired)
 
 //================ 50. Array map method trong JavaScript | Làm việc với mảng =====================
-var sports = [  
-    {
-        id: 1,
-        name: 'Soccer',
-        tired: 1,
-        coin: 105
-    },
-    {
-        id: 2,
-        name: 'Volleyball',
-        tired: 1,
-        coin: 103
-    },
-    {
-        id: 3,
-        name: 'Badminton',
-        tired: 1,
-        coin: 102
-    },
-    {
-        id: 4,
-        name: 'BaseBall',
-        tired: 100,
-        coin: 109
-    },
-    {
-        id: 5,
-        name: 'Swimming',
-        tired: 0,
-        coin: 156
-    },
+var sports = [
+  {
+    id: 1,
+    name: "Soccer",
+    tired: 1,
+    coin: 105,
+  },
+  {
+    id: 2,
+    name: "Volleyball",
+    tired: 1,
+    coin: 103,
+  },
+  {
+    id: 3,
+    name: "Badminton",
+    tired: 1,
+    coin: 102,
+  },
+  {
+    id: 4,
+    name: "BaseBall",
+    tired: 100,
+    coin: 109,
+  },
+  {
+    id: 5,
+    name: "Swimming",
+    tired: 0,
+    coin: 156,
+  },
 
-    {
-        id: 6,
-        name: 'Badminton',
-        tired: 100,
-        coin: 199
-    },
+  {
+    id: 6,
+    name: "Badminton",
+    tired: 100,
+    coin: 199,
+  },
+];
 
-] 
+// Tổng tiền
+const sum = sports.reduce((count, value) => {
+  return count + value.coin;
+}, 0);
+
+console.log("Total: ", sum);
+
 // function game(game){
 //     return {
 //         id : game.id,
@@ -547,7 +542,7 @@ var sports = [
 
 // Create New Array Name
 // function newName(names){
-//     return 
+//     return
 //     {
 //         id: names.id,
 //         name: `New Game ${game.name}`,
@@ -561,11 +556,9 @@ var sports = [
 //         // mucdo: game.tired,
 //         // index: index + 1
 //     ]
-        
-    
+
 // }); // Array
 // console.log("Learn map: ", newSports)
-
 
 //============= Phương thức reduce khi làm việc với array =======================
 // Dùng Vòng Lặp
@@ -587,7 +580,7 @@ var sports = [
 // function totalHanderCoin(accumulator, curentValue, curentIndex, originArray){
 //     console.table({
 //         "Môn thể thao thứ": curentIndex + 1,
-//         "Chi phí chơi": `${curentValue.coin} ngàn đồng`        
+//         "Chi phí chơi": `${curentValue.coin} ngàn đồng`
 //     })
 //     accumulator+=curentValue.coin
 //     return accumulator
@@ -598,5 +591,13 @@ var sports = [
 // console.log("Tổng chi phí chơi thể thao: " , totalCoin)
 
 // viết ngắn gọn
-var totalCoin=sports.reduce((acc, val)=>acc + val.coin, 0)
-console.log(totalCoin)
+// var sumCoin = sports.reduce((count, val)=>{
+//     return count+val.coin
+// } , 0)
+// console.log("Total Coin: ", sumCoin)
+
+const random = Math.floor(Math.random() * 100);
+if (random < 50) {
+  console.log("Success!", random);
+}
+
