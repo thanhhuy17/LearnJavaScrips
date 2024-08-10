@@ -601,7 +601,7 @@
 //   console.log("Success!", random);
 // }
 
-// Call back function:  call back là 1 hàm đc làm đối số truyền nào của 1 hàm khác
+//! Call back function:  call back là 1 hàm đc làm đối số truyền nào của 1 hàm khác
 
 // function myTestFunction(param) {
 //   param("Học Đi Đôi vs Hành");
@@ -674,33 +674,180 @@
 
 // console.log(a);
 
-const listUsers = [
-  {
-    name: "Hung",
-    age: 15,
-  },
-  {
-    name: "David",
-    age: 2,
-  },
-  {
-    name: "Dang",
-    age: 8,
-  },
-  {
-    name: "Dan",
-    age: 8,
-  },
-];
+// const listUsers = [
+//   {
+//     name: "Hung",
+//     age: 15,
+//   },
+//   {
+//     name: "David",
+//     age: 2,
+//   },
+//   {
+//     name: "Dang",
+//     age: 8,
+//   },
+//   {
+//     name: "Dan",
+//     age: 8,
+//   },
+// ];
 
-listUsers.length = 10
+// listUsers.length = 10;
 
-console.log(listUsers.length);
+// console.log(listUsers.length);
 
 // for (let i = 0; i < listUsers.length; ++i) {
 //   console.log(listUsers[i]);
 // }
 
-for(var value in listUsers){
-    console.log(listUsers[value]);
-}
+//
+
+//!-------- Xây dựng phương thức forEach -------------
+// Array.prototype.forEach2 = function (callback) {
+//   for (var index in this) {
+//     if (this.hasOwnProperty(index)) {
+// //console.log( index);
+//       callback(this[index], index, this);
+//     }
+//   }
+// };
+
+// const listUsers = [
+//   {
+//     name: "Hung",
+//     age: 15,
+//   },
+//   {
+//     name: "David",
+//     age: 2,
+//   },
+//   {
+//     name: "Dang",
+//     age: 8,
+//   },
+// ];
+
+// listUsers.forEach2((user, index, array) => {
+//   console.log("All: ", user, index, array);
+// });
+// console.log(result);
+
+//!-------- Xây dựng phương thức Filter -------------
+
+// Array.prototype.filter2 = function (callback) {
+//   var output = []
+//   for (var index in this) {
+//     if (this.hasOwnProperty(index)) {
+//       var result= callback(this[index], index, this);
+//       if(result){
+//         output.push(this[index])
+//       }
+//     }
+//   }
+//   return output
+// };
+
+// const listUsers = [
+//   {
+//     name: "Hung",
+//     age: 15,
+//   },
+//   {
+//     name: "David",
+//     age: 2,
+//   },
+//   {
+//     name: "Dang AHai",
+//     age: 8,
+//   },
+// ];
+
+// var filterResult = listUsers.filter2((user, index, array) => {
+//   return user.name.includes('Da');
+//   // console.log(user, index, array);
+//   // return user.age > 2;
+// });
+
+// console.log(filterResult);
+
+//!-------- Xây dựng phương thức Some -------------
+//? Chỉ 1 điều kiện thỏa là trả về True và dừng vòng lặp
+// Array.prototype.some2 = function (callback) {
+//   for (var index in this) {
+//     if (this.hasOwnProperty(index)) {
+//       // console.log(index);
+//       var result = callback(this[index], index, this);
+//       if (result) {
+//         return true;
+//       }
+//     }
+//   }
+//   return false;
+// };
+// const listUsers = [
+//   {
+//     name: "Hung",
+//     age: 15,
+//     isFinish: true,
+//   },
+//   {
+//     name: "David",
+//     age: 2,
+//     isFinish: true,
+//   },
+//   {
+//     name: "Dang AHai",
+//     age: 8,
+//     isFinish: false,
+//   },
+// ];
+
+// // var listUsers = new Array(1000)
+
+// const result = listUsers.some2(function (user, index, array) {
+//   // console.log(listUsers);
+//   return user.age < 2;
+// });
+
+// console.log(result);
+
+//!-------- Xây dựng phương thức Every -------------
+//? Tất cả điều kiện đều phải thỏa thì every mới trả về True, 1 cái không thỏa là dừng vòng lặp
+
+Array.prototype.every2 = function (callback) {
+  for (var index in this) {
+    if (this.hasOwnProperty(index)) {
+      // console.log(index);
+      var result = callback(this[index], index, this);
+      if (!result) {
+        return false;
+      }
+    }
+  }
+  return true;
+};
+const listUsers = [
+  {
+    name: "Hung",
+    age: 15,
+    isFinish: true,
+  },
+  {
+    name: "David",
+    age: 2,
+    isFinish: true,
+  },
+  {
+    name: "Dang AHai",
+    age: 8,
+    isFinish: false,
+  },
+];
+
+const User = listUsers.every2((user, index, array) => {
+  // console.log(user, index, array);
+  return user.age > 1;
+});
+
+console.log(User);
