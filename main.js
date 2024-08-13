@@ -415,40 +415,40 @@
 // }
 
 //49: Làm việc với Mảng trong JavaScript
-// var sports = [
-//     {
-//         id: 1,
-//         name: 'Soccer',
-//         tired: 1
-//     },
-//     {
-//         id: 2,
-//         name: 'Volleyball',
-//         tired: 1
-//     },
-//     {
-//         id: 3,
-//         name: 'Badminton',
-//         tired: 1
-//     },
-//     {
-//         id: 4,
-//         name: 'BaseBall',
-//         tired: 100
-//     },
-//     {
-//         id: 5,
-//         name: 'Swimming',
-//         tired: 0
-//     },
+var sports = [
+    {
+        id: 1,
+        name: 'Soccer',
+        tired: 1
+    },
+    {
+        id: 2,
+        name: 'Volleyball',
+        tired: 1
+    },
+    {
+        id: 3,
+        name: 'Badminton',
+        tired: 1
+    },
+    {
+        id: 4,
+        name: 'BaseBall',
+        tired: 100
+    },
+    {
+        id: 5,
+        name: 'Swimming',
+        tired: 0
+    },
 
-//     {
-//         id: 6,
-//         name: 'Badminton',
-//         tired: 100
-//     },
+    {
+        id: 6,
+        name: 'Badminton',
+        tired: 100
+    },
 
-// ]
+]
 // sports.forEach(function(sport, index){
 //     console.log(index,sport)
 // });
@@ -476,9 +476,9 @@
 // console.log(checkTired)
 //--------------- Filter---------------------
 
-// var checkTired = sports.filter(function(sport, index){
-//     return sport.name === 'Badminton'
-// });
+var checkTired = sports.filter(function(sport, index){
+    return sport.name === 'Badminton'
+});
 
 // var huy = checkTired ? 'Quá khỏe': 'Quá Mệt'
 // console.log(checkTired)
