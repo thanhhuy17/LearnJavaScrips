@@ -415,40 +415,40 @@
 // }
 
 //49: Làm việc với Mảng trong JavaScript
-var sports = [
-    {
-        id: 1,
-        name: 'Soccer',
-        tired: 1
-    },
-    {
-        id: 2,
-        name: 'Volleyball',
-        tired: 1
-    },
-    {
-        id: 3,
-        name: 'Badminton',
-        tired: 1
-    },
-    {
-        id: 4,
-        name: 'BaseBall',
-        tired: 100
-    },
-    {
-        id: 5,
-        name: 'Swimming',
-        tired: 0
-    },
+// var sports = [
+//     {
+//         id: 1,
+//         name: 'Soccer',
+//         tired: 1
+//     },
+//     {
+//         id: 2,
+//         name: 'Volleyball',
+//         tired: 1
+//     },
+//     {
+//         id: 3,
+//         name: 'Badminton',
+//         tired: 1
+//     },
+//     {
+//         id: 4,
+//         name: 'BaseBall',
+//         tired: 100
+//     },
+//     {
+//         id: 5,
+//         name: 'Swimming',
+//         tired: 0
+//     },
 
-    {
-        id: 6,
-        name: 'Badminton',
-        tired: 100
-    },
+//     {
+//         id: 6,
+//         name: 'Badminton',
+//         tired: 100
+//     },
 
-]
+// ]
 // sports.forEach(function(sport, index){
 //     console.log(index,sport)
 // });
@@ -476,9 +476,9 @@ var sports = [
 // console.log(checkTired)
 //--------------- Filter---------------------
 
-var checkTired = sports.filter(function(sport, index){
-    return sport.name === 'Badminton'
-});
+// var checkTired = sports.filter(function(sport, index){
+//     return sport.name === 'Badminton'
+// });
 
 // var huy = checkTired ? 'Quá khỏe': 'Quá Mệt'
 // console.log(checkTired)
@@ -815,39 +815,77 @@ var checkTired = sports.filter(function(sport, index){
 //!-------- Xây dựng phương thức Every -------------
 //? Tất cả điều kiện đều phải thỏa thì every mới trả về True, 1 cái không thỏa là dừng vòng lặp
 
-Array.prototype.every2 = function (callback) {
-  for (var index in this) {
-    if (this.hasOwnProperty(index)) {
-      // console.log(index);
-      var result = callback(this[index], index, this);
-      if (!result) {
-        return false;
-      }
-    }
+// Array.prototype.every2 = function (callback) {
+//   for (var index in this) {
+//     if (this.hasOwnProperty(index)) {
+//       // console.log(index);
+//       var result = callback(this[index], index, this);
+//       if (!result) {
+//         return false;
+//       }
+//     }
+//   }
+//   return true;
+// };
+// const listUsers = [
+//   {
+//     name: "Hung",
+//     age: 15,
+//     isFinish: true,
+//   },
+//   {
+//     name: "David",
+//     age: 2,
+//     isFinish: true,
+//   },
+//   {
+//     name: "Dang AHai",
+//     age: 8,
+//     isFinish: false,
+//   },
+// ];
+
+// const User = listUsers.every2((user, index, array) => {
+//   // console.log(user, index, array);
+//   return user.age >= 2;
+// });
+
+// console.log(User);
+
+//! Đệ Quy
+//! 1. Xác định điểm dừng
+//! 2. Logic Handle => Tạo ra điểm dừng
+
+//? Ví dụ 1
+// function countDown(num){
+//   if(num > 0){
+//     console.log(num);
+//     return countDown(num - 1)
+//   }
+//   return num
+// }
+
+// countDown(3)
+
+//? Ví dụ 2:
+// function loop(start, end, callback) {
+//   if (start < end) {
+//     callback(start);
+//     return loop(start + 1, end, callback);
+//   }
+// }
+
+// const array = ["Python", "C#", "JavaScript"];
+// loop(0, array.length, function (index) {
+//   console.log("index: ", index);
+// });
+
+//? Vi du 3:
+function giaiThua(number) {
+  if (number > 0) {
+    return number * giaiThua(number - 1);
   }
-  return true;
-};
-const listUsers = [
-  {
-    name: "Hung",
-    age: 15,
-    isFinish: true,
-  },
-  {
-    name: "David",
-    age: 2,
-    isFinish: true,
-  },
-  {
-    name: "Dang AHai",
-    age: 8,
-    isFinish: false,
-  },
-];
-
-const User = listUsers.every2((user, index, array) => {
-  // console.log(user, index, array);
-  return user.age > 1;
-});
-
-console.log(User);
+  return 1;
+}
+console.log(giaiThua(6));
+;
