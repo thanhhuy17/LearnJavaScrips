@@ -881,11 +881,36 @@
 // });
 
 //? Vi du 3:
-function giaiThua(number) {
-  if (number > 0) {
-    return number * giaiThua(number - 1);
-  }
-  return 1;
-}
-console.log(giaiThua(6));
-;
+// function giaiThua(number) {
+//   if (number > 0) {
+//     return number * giaiThua(number - 1);
+//   }
+//   return 1;
+// }
+// console.log(giaiThua(6));
+// ;
+
+//! JSON
+//! 1. Là một định dạng dữ liệu (chuối)
+//! 2. JavaScript Object Notation
+//! 3. JSON: NUmber, string, boolean, Null, Array, Object
+//! Mã Hóa: EnCode
+//! Giải mã: DeCode
+//! Stringify : Từ JavaScript types -> JSON
+//! Parse : Từ JSON -> JavaScript types
+
+// var json1 = '["python", "JavaScript"]';
+// var json = '{"name": "Thanh Huy", "age": 25}';
+
+// console.log(JSON.parse(json1));
+
+//!PROMISE
+//? sync/async: -> OK
+//? setTimeOut, setInterval, fetch, XMLHttpRequest, file reading, request Animation frame
+//? Noi dau -> OK
+//? Ly thuyet, cach hoat dong -> 
+//? Thuc hanh, vidu
+ 
+const promise = new Promise((resolve, reject)=>{
+  //Logic
+})
